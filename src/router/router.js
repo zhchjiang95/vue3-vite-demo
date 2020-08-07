@@ -1,10 +1,13 @@
 import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
-import Component from '../views/Component.vue'
+import Home from '../views/Home.vue'
 
 const routes = [
   {
     path: '/',
-    component: Component,
+    component: Home,
+    meta: {
+      title: '首页'
+    }
   },
   {
     path: '/cgCount',
@@ -42,8 +45,11 @@ const routes = [
     }
   },
   {
-    path: '/about',
-    component: () => import('../views/About.vue'),
+    path: '/funcComponent',
+    component: () => import('../views/FuncComponent.vue'),
+    meta: {
+      title: '函数组件的开发与使用'
+    }
   },
 ]
 
